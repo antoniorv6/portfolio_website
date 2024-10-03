@@ -1,0 +1,60 @@
+---
+import ProjectCard from "./ProjectCard.astro"
+
+
+const projects = [
+    {
+        title: 'Sheet Music Transformer',
+        description: 'End-to-end full-page optical music recognition for pianoform sheet music',
+        language: 'Transformers',
+        tags: ['OMR', 'Python', 'Pianoform'],
+        icon: 'Music'
+    },
+    {
+        title: 'Rotations are all you need',
+        description: 'A generic end-to-end OMR transcription system',
+        language: 'Python',
+        tags: ['OMR', 'Pianoform', 'Monophony', 'Lyrics'],
+        icon: 'Music'
+    },
+    {
+        title: 'YALE',
+        description: '[WIP] Yet Another LaTex Editor',
+        language: 'Tauri',
+        tags: ['Desktop app', 'LaTex'],
+        icon: 'Laptop'
+    },
+    {
+        title: 'antoniorv6.github.io',
+        description: 'My personal website and portfolio',
+        language: 'Astro',
+        tags: ['Web development', 'Portfolio'],
+        icon: 'Globe'
+    },
+    {
+        title: 'Full-page OMR',
+        description: 'End-to-End Full-page Optical Music Recognition for mensural music',
+        language: 'Python',
+        tags: ['OMR', 'Mensural', 'Monophonic'],
+        icon: 'Music'
+    },
+]
+
+---
+
+<div class="w-full px-4 py-8">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-3xl font-bold mb-8">Recent projects</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {projects.map((project) => (
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+            language={project.language}
+            tags={project.tags},
+            icon={project.icon}
+          />
+        ))}
+      </div>
+    </div>
+  </div>

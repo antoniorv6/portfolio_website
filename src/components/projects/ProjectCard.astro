@@ -1,0 +1,60 @@
+---
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Image } from 'astro:assets';
+import * as LucideIcons from 'lucide-react';
+
+interface Props {
+  title: string;
+  description: string;
+  language: string;
+  tags: string[];
+  icon: keyof typeof LucideIcons;
+}
+
+const { title, description, language, tags, icon = 'FileIcon' } = Astro.props;
+
+function getLanguageIconPath(lang: string): string {
+  const normalizedLang = lang.toLowerCase();
+  return `/svg/${normalizedLang}.svg`;
+}
+
+const Icon = LucideIcons[icon] || LucideIcons.FileIcon;
+
+const iconPath = getLanguageIconPath(language);
+---
+
+<Card className="h-full borderrounded-md overflow-hidden hover:shadow-white transition-shadow duration-300">
+  <div class="flex flex-col h-full">
+    <CardHeader className="p-4 border-gray-200">
+      <div class="flex items-center gap-2">
+        <Icon/>
+        <CardTitle className="text-base font-semibold hover:underline hover:cursor-pointer">
+          {title}
+        </CardTitle>
+      </div>
+    </CardHeader>
+    <CardContent className="flex-grow px-4 pb-4">
+      <p class="text-sm text-gray-100 mb-4 line-clamp-3">{description}</p>
+      <div class="flex flex-wrap gap-2">
+        {tags.map((tag: string) => (
+          <Badge className="text-xs py-0.5 px-2 text-gray-800">
+            {tag}
+          </Badge>
+        ))}
+      </div>
+    </CardContent>
+    <div class="px-4 pb-2 border-gray-200">
+      <div class="flex items-center gap-2">
+        <Image
+          src={iconPath}
+          alt={`${language} icon`}
+          width={16}
+          height={16}
+          class="w-6 h-6"
+        />
+        <span class="text-xs text-gray-100">{language}</span>
+      </div>
+    </div>
+  </div>
+</Card>
