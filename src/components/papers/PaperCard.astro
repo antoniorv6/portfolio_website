@@ -1,0 +1,20 @@
+---
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+
+const { paper } = Astro.props
+---
+<Card className="flex flex-col h-full">
+    <CardHeader>
+      <CardTitle className="text-lg">{paper.title}</CardTitle>
+    </CardHeader>
+    <CardContent className="flex flex-col gap-2">
+      <p class="text-sm text-muted-foreground">{paper.authors}</p>
+      <div class="flex justify-between items-center">
+        <span class="text-sm text-muted-foreground">
+          {paper.year}
+        </span>
+        <Badge variant="secondary">{paper.venue}</Badge>
+      </div>
+    </CardContent>
+  </Card>

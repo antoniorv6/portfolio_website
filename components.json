@@ -6,7 +6,7 @@
   "tailwind": {
     "config": "tailwind.config.mjs",
     "css": "src/styles/global.css",
-    "baseColor": "state",
+    "baseColor": "neutral",
     "cssVariables": true,
     "prefix": ""
   },

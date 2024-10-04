@@ -1,46 +1,15 @@
 ---
 import ProjectCard from "./ProjectCard.astro"
-import { ChevronRight } from "lucide-react"
+import projects from "@/data/projects"
 
-
-const projects = [
-    {
-        title: 'Sheet Music Transformer',
-        description: 'End-to-end full-page optical music recognition for pianoform sheet music',
-        language: 'Transformers',
-        tags: ['OMR', 'Python', 'Pianoform'],
-        icon: 'Music'
-    },
-    {
-        title: 'Rotations are all you need',
-        description: 'A generic end-to-end OMR transcription system',
-        language: 'Python',
-        tags: ['OMR', 'Pianoform', 'Monophony', 'Lyrics'],
-        icon: 'Music'
-    },
-    {
-        title: 'YALE',
-        description: '[WIP] Yet Another LaTex Editor',
-        language: 'Tauri',
-        tags: ['Desktop app', 'LaTex'],
-        icon: 'Laptop'
-    },
-    {
-        title: 'ReadSco',
-        description: 'An online tool to transcribe your music scores',
-        language: 'Angular',
-        tags: ['OMR', 'Application'],
-        icon: 'Globe'
-    },
-]
-
+const showcase_projects = projects.slice(0, 4)
 ---
 
-<div class="w-full px-4 py-8">
+<div class="w-full px-4 pb-8" id="projects">
     <div class="max-w-7xl mx-auto">
       <h1 class="text-3xl font-bold mb-8">Recent projects</h1>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {projects.map((project) => (
+        {showcase_projects.map((project) => (
           <ProjectCard
             title={project.title}
             description={project.description}
