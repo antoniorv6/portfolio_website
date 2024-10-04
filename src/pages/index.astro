@@ -1,9 +1,9 @@
 ---
 import '@/styles/global.css'
 import Layout from '../layouts/Layout.astro';
-import ProjectCard from '@/components/projects/ProjectCard.astro'
 import ProjectsGrid from '@/components/projects/ProjectsGrid.astro';
 import ExperienceTimeline from '@/components/experience/ExperienceTimeline.astro';
+import HeroSection from '@/components/hero/HeroSection.astro';
 
 
 const education = [
@@ -56,9 +56,11 @@ const works = [
 
 <Layout title="Welcome to Astro.">
 	<main>
+        <HeroSection />
 		<ProjectsGrid />
-		<ExperienceTimeline title="Experience" timelinegrid={works} />
-		<ExperienceTimeline title="Education" timelinegrid={education} />
-
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:mx-4 md:mx-20 px-4 py-8">
+            <ExperienceTimeline title="Experience" timelinegrid={works} />
+            <ExperienceTimeline title="Education" timelinegrid={education} />
+        </div>
 	</main>
 </Layout>

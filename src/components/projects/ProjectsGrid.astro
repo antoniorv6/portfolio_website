@@ -1,5 +1,6 @@
 ---
 import ProjectCard from "./ProjectCard.astro"
+import { ChevronRight } from "lucide-react"
 
 
 const projects = [
@@ -25,18 +26,11 @@ const projects = [
         icon: 'Laptop'
     },
     {
-        title: 'antoniorv6.github.io',
-        description: 'My personal website and portfolio',
-        language: 'Astro',
-        tags: ['Web development', 'Portfolio'],
+        title: 'ReadSco',
+        description: 'An online tool to transcribe your music scores',
+        language: 'Angular',
+        tags: ['OMR', 'Application'],
         icon: 'Globe'
-    },
-    {
-        title: 'Full-page OMR',
-        description: 'End-to-End Full-page Optical Music Recognition for mensural music',
-        language: 'Python',
-        tags: ['OMR', 'Mensural', 'Monophonic'],
-        icon: 'Music'
     },
 ]
 
@@ -55,6 +49,7 @@ const projects = [
             icon={project.icon}
           />
         ))}
+        <a href="#" class="hover:underline">All projects</a>
       </div>
     </div>
   </div>
