@@ -5,9 +5,12 @@ import react from '@astrojs/react';
 
 import tailwind from '@astrojs/tailwind';
 
+import netlify from '@astrojs/netlify';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://antoniorv6.github.io',
-  base: '/antoniorv6.github.io',
-  integrations: [react(), tailwind({applyBaseStyles: false})]
+  integrations: [react(), tailwind({applyBaseStyles: false})],
+  output: 'server',
+  adapter: netlify()
 });

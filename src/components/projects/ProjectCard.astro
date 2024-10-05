@@ -2,21 +2,25 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Image } from 'astro:assets';
+import * as LucideIcons from 'lucide-react';
 
 interface Props {
   title: string;
   description: string;
   language: string;
   tags: string[];
+  icon: keyof typeof LucideIcons;
   link: string;
 }
 
-const { title, description, language, tags, link = 'FileIcon' } = Astro.props;
+const { title, description, language, tags, link, icon = 'FileIcon' } = Astro.props;
 
 function getLanguageIconPath(lang: string): string {
   const normalizedLang = lang.toLowerCase();
-  return `/antoniorv6.github.io/svg/${normalizedLang}.svg`;
+  return `/svg/${normalizedLang}.svg`;
 }
+
+const Icon = LucideIcons[icon] || LucideIcons.FileIcon;
 
 const iconPath = getLanguageIconPath(language);
 ---
@@ -26,6 +30,7 @@ const iconPath = getLanguageIconPath(language);
   <div class="flex flex-col h-full">
     <CardHeader className="p-4 border-gray-200">
       <div class="flex items-center gap-2">
+        <Icon/>
         <CardTitle className="text-base font-semibold hover:underline hover:cursor-pointer">
           {title}
         </CardTitle>
