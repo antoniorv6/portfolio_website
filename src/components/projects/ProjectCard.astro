@@ -9,18 +9,15 @@ interface Props {
   description: string;
   language: string;
   tags: string[];
-  icon: keyof typeof LucideIcons;
   link: string;
 }
 
-const { title, description, language, tags, link, icon = 'FileIcon' } = Astro.props;
+const { title, description, language, tags, link = 'FileIcon' } = Astro.props;
 
 function getLanguageIconPath(lang: string): string {
   const normalizedLang = lang.toLowerCase();
   return `/antoniorv6.github.io/svg/${normalizedLang}.svg`;
 }
-
-const Icon = LucideIcons[icon] || LucideIcons.FileIcon;
 
 const iconPath = getLanguageIconPath(language);
 ---
