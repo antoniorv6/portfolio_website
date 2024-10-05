@@ -1,0 +1,39 @@
+---
+import '@/styles/global.css'
+import Layout from '../layouts/Layout.astro';
+
+import projects from '@/data/projects';
+import ProjectCard from '@/components/projects/ProjectCard.astro';
+
+
+---
+<Layout title="Welcome to Astro.">
+	<main>
+        <section class="w-full py-6 md:py-8 lg:py-16 xl:py-16">
+            <div class="flex flex-col items-center space-y-4 text-center">
+                <div class="space-y-2">
+                  <h1 class="text-2xl font-extrabold tracking-tight md:text-3xl lg:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-gray-400">
+                    Projects
+                  </h1>
+                  <p class="mx-auto max-w-[700px] text-zinc-500 md:text-xl dark:text-zinc-400">
+                    All my open-source projects so far
+                  </p>
+                </div>
+            </div>
+        </section>
+        <section class="max-w-7xl mx-auto px-4 py-8">
+                <div class="grid grid-cols-1 gap-8">
+                        {projects.map((project) => (
+                                <ProjectCard
+                                    title={project.title}
+                                    description={project.description}
+                                    language={project.language}
+                                    tags={project.tags},
+                                    icon={project.icon},
+                                    link={project.link}
+                                />
+                        ))}
+                </div>
+        </section>
+	</main>
+</Layout>

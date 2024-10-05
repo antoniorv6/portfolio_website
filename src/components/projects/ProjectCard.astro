@@ -10,13 +10,14 @@ interface Props {
   language: string;
   tags: string[];
   icon: keyof typeof LucideIcons;
+  link: string;
 }
 
-const { title, description, language, tags, icon = 'FileIcon' } = Astro.props;
+const { title, description, language, tags, link, icon = 'FileIcon' } = Astro.props;
 
 function getLanguageIconPath(lang: string): string {
   const normalizedLang = lang.toLowerCase();
-  return `/svg/${normalizedLang}.svg`;
+  return `/antoniorv6.github.io/svg/${normalizedLang}.svg`;
 }
 
 const Icon = LucideIcons[icon] || LucideIcons.FileIcon;
@@ -25,6 +26,7 @@ const iconPath = getLanguageIconPath(language);
 ---
 
 <Card className="h-full borderrounded-md overflow-hidden hover:shadow-white hover:cursor-pointer transition-shadow duration-300">
+  <a href={link}>
   <div class="flex flex-col h-full">
     <CardHeader className="p-4 border-gray-200">
       <div class="flex items-center gap-2">
@@ -56,5 +58,6 @@ const iconPath = getLanguageIconPath(language);
         <span class="text-xs text-gray-100">{language}</span>
       </div>
     </div>
+    </a>
   </div>
 </Card>
