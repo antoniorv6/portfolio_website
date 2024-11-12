@@ -32,12 +32,12 @@ const projects = [
         link: "https://github.com/antoniorv6/ijdar-e2e-pianoform",
     },
     {
-        title: 'antoniorv6.github.io',
+        title: 'antoniorv6 portfolio',
         description: 'My portfolio',
         language: 'Astro',
         tags: ['Website'],
         icon: 'Globe',
-        link: "https://github.com/antoniorv6/antoniorv6.github.io"
+        link: "https://github.com/antoniorv6/portfolio_website"
     },
     {
         title: 'Rioscarratalá',
