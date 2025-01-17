@@ -16,14 +16,6 @@ const projects = [
         link: "https://github.com/antoniorv6/ijdar-e2e-pianoform"
     },
     {
-        title: 'YALE',
-        description: '[WIP] Yet Another LaTex Editor',
-        language: 'Tauri',
-        tags: ['Desktop app', 'LaTex'],
-        icon: 'Laptop',
-        link: ""
-    },
-    {
         title: 'Aligned Music Notation & Lyrics Transcription',
         description: 'End-to-end music notation and lyrics transcription system transcription through rotations and unfolding',
         language: 'Python',
@@ -32,16 +24,8 @@ const projects = [
         link: "https://github.com/antoniorv6/ijdar-e2e-pianoform",
     },
     {
-        title: 'antoniorv6 portfolio',
-        description: 'My portfolio',
-        language: 'Astro',
-        tags: ['Website'],
-        icon: 'Globe',
-        link: "https://github.com/antoniorv6/portfolio_website"
-    },
-    {
         title: 'Rioscarratalá',
-        description: 'Personal website for Juan Antonio Ríos Carratalá',
+        description: 'Personal website and portfolio for Juan Antonio Ríos Carratalá',
         language: 'Astro',
         tags: ['Website'],
         icon: 'Globe',
