@@ -18,6 +18,11 @@ const education = [
 
 const works = [
     {
+        date: "Current",
+        title: "Postdoctoral Orientation Period - University of Alicante",
+        description: "Postdoctoral research at the University of Alicante through the grant ACIF 2021/036 from the Generalitat Valenciana. Working on Sheet Music Information Retrieval.",
+    },
+    {
         date: "Oct 2021 - July 2024",
         title: "Ph.D Candidate - Generalitat Valenciana",
         description: "Ph.D Candidate with the grant ACIF 2021/036 from the Generalitat Valenciana. Working on my Ph.D thesis: \" End-to-end full-page optical music recognition beyond staff-level transcritption\".",

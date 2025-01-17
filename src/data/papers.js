@@ -1,5 +1,15 @@
 const papers = [
   {
+    "author": "Antonio Ríos-Vila, Jorge Calvo-Zaragoza, David Rizo, Thierry Paquet",
+    "title": "Aligned Music Notation and Lyrics Transcription",
+    "year": 2024,
+    "volume": "abs/2412.04217",
+    "venue": "ArXiv",
+    "ee": "https://doi.org/10.48550/arXiv.2412.04217",
+    "url": "https://arxiv.org/abs/2412.04217",
+    "venue_type": "journal"
+  },
+  {
     "author": "María Alfaro-Contreras, Antonio Ríos-Vila, Jose J. Valero-Mas, Jorge Calvo-Zaragoza",
     "title": "A Transformer Approach for Polyphonic Audio-to-Score Transcription.",
     "pages": "706-710",
@@ -22,7 +32,7 @@ const papers = [
   },
   {
     "author": "Antonio Ríos-Vila, Jorge Calvo-Zaragoza, David Rizo, Thierry Paquet",
-    "title": "Sheet Music Transformer ++: End-to-End Full-Page Optical Music Recognition for Pianoform Sheet Music.",
+    "title": "End-to-End Full-Page Optical Music Recognition for Pianoform Sheet Music.",
     "year": 2024,
     "volume": "abs/2405.12105",
     "venue": "ArXiv",

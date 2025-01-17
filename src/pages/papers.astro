@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 import papers from '@/data/papers';
 import PaperCard from '@/components/papers/PaperCard.astro';
+import BackButton from '@/components/BackButton.astro'
 
 const journal_papers = papers.filter((paper) => paper.venue_type === 'journal');
 const congress_papers = papers.filter((paper) => paper.venue_type === 'congress');
@@ -21,6 +22,7 @@ const congress_papers = papers.filter((paper) => paper.venue_type === 'congress'
                     Research publications since 2019
                   </p>
                 </div>
+                <BackButton/>
             </div>
         </section>
         <section class="max-w-7xl mx-auto px-4 py-8">
